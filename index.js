@@ -46,10 +46,30 @@ function addNodeToEndRecursive(node, newNode) {
   }
 }
 
+function countNodes(node) {
+  let currentNode = node;
+  let count = 0;
+  while (currentNode !== null) {
+    currentNode = currentNode.next;
+    count = count + 1;
+  }
+  return count;
+}
+
+function countNodesRecursive(node) {
+  if (node === null) {
+    return 0;
+  }
+  else {
+    return 1 + countNodesRecursive(node.next);
+  }
+}
+
 let head = new Node(5, new Node(6, new Node(7, new Node(8, null))));
 const nodeToAddToEnd = new Node(9, null);
 addNodeToEnd(head, nodeToAddToEnd);
 addNodeToEndRecursive(head, new Node(10, null));
 addNodeToEndRecursive(head, new Node(11, null));
 
-printLinkedListRecursive(head);
+const numberOfNodes = countNodesRecursive(head);
+console.log(numberOfNodes);
