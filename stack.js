@@ -21,6 +21,14 @@ class Stack {
     if (this.head === null) {
       this.head = newNode;
     }
+    else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+  }
+
+  pop() {
+    // TODO: return the "first" item in the stack and remove it
   }
 }
 
