@@ -9,4 +9,6 @@ queue.enqueue(4);
 queue.enqueue(5);
 queue.enqueue(6);
 
-// Can you reverse this queue using a stack?
+// TODO: reverse this queue using a stack?
+// 1 -> 2 -> 3 -> 4 -> 5 -> 6
+// 6 -> 5 -> 4 -> 3 -> 2 -> 1
