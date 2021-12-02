@@ -31,8 +31,16 @@ class Queue {
   }
 
   dequeue() {
-
+    const data = this.head.data;
+    this.head = this.head.next;
+    return data;
   }
 }
 
 const queue = new Queue();
+
+queue.enqueue('Person 1');
+queue.enqueue('Person 2');
+queue.enqueue('Person 3');
+
+console.log(queue.dequeue()); // must print "Person 1"

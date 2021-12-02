@@ -30,7 +30,6 @@ class Stack {
   }
 
   pop() {
-    // TODO: return the "first" item in the stack and remove it
     const nodeToReturn = this.head;
     this.head = nodeToReturn.next;
     return nodeToReturn.data;
