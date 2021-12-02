@@ -36,19 +36,4 @@ class Stack {
   }
 }
 
-const stack = new Stack();
-
-stack.push('Pringles 1');
-stack.push('Pringles 2');
-stack.push('Pringles 3');
-stack.push('Pringles 4');
-
-if (stack.isEmpty()) {
-  console.log('is empty');
-}
-else {
-  console.log('is not empty');
-}
-
-console.log(stack.pop());
-console.log(stack.pop());
+module.exports = Stack;

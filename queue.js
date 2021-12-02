@@ -37,10 +37,4 @@ class Queue {
   }
 }
 
-const queue = new Queue();
-
-queue.enqueue('Person 1');
-queue.enqueue('Person 2');
-queue.enqueue('Person 3');
-
-console.log(queue.dequeue()); // must print "Person 1"
+module.exports = Queue;
