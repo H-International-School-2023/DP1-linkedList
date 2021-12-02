@@ -11,7 +11,7 @@ function recursivePrint(node) {
 
 function recursiveReversePrint(node) {
   if (node !== null) {
-    recursivePrint(node.next);
+    recursiveReversePrint(node.next);
     console.log(node.data);
   }
 }
@@ -46,6 +46,7 @@ class SingleLinkedList {
 
   count() {
     // TODO: What is the computational complexity of this function?
+    // Big O notation
     recursiveCount(this.head)
   }
 
@@ -55,5 +56,14 @@ class SingleLinkedList {
     // TODO: What is the computational complexity of this function?
   }
 };
+
+const singleLinkedList = new SingleLinkedList();
+singleLinkedList.addAtStart(1);
+singleLinkedList.addAtStart(2);
+singleLinkedList.addAtStart(3);
+singleLinkedList.addAtStart(4);
+singleLinkedList.addAtStart(5);
+
+singleLinkedList.reversePrint();
 
 module.exports = SingleLinkedList;
