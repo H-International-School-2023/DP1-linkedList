@@ -25,6 +25,15 @@ function recursiveCount(node) {
   }
 }
 
+function recursiveNodeAtPosition(position, node) {
+  if (position === 0) {
+    return node;
+  }
+  else {
+    return recursiveNodeAtPosition(position - 1, node);
+  }
+}
+
 class SingleLinkedList {
   constructor() {
     this.head = null;
@@ -45,15 +54,13 @@ class SingleLinkedList {
   }
 
   count() {
-    // TODO: What is the computational complexity of this function?
-    // Big O notation
+    // Computational complexity O(n)
     recursiveCount(this.head)
   }
 
   getItemAt(position) {
-    // TODO: try to get the element at position "position"
-    // in a iterative way and in a recursive way
-    // TODO: What is the computational complexity of this function?
+    // Computational complexity O(position)
+    return recursiveNodeAtPosition(position, this.head);
   }
 };
 

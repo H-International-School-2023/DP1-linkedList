@@ -5,8 +5,17 @@ class SingleNode {
   }
 };
 
+class TreeNode {
+  constructor(key, left, right) {
+    this.key = key;
+    this.left = left;
+    this.right = right;
+  }
+}
+
 const exportObject = {
   SingleNode: SingleNode,
+  TreeNode: TreeNode,
 };
 
 module.exports = exportObject;
