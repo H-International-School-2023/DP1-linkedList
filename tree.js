@@ -17,9 +17,25 @@ function postOrderPrint(node) {
   }
 };
 
-// TODO: create the inOrderPrint function
-// TODO: create a recursive function that count all the leaves. 
-// Try to implement the same function in an iterative way
+function inOrderPrint(node) {
+  if (node !== null) {
+    inOrderPrint(node.left);
+    console.log(node.key);
+    inOrderPrint(node.right);
+  }
+};
+
+function countLeaves(node) {
+  if (node === null) {
+    return 0;
+  }
+  else {
+    if (node.left === null && node.right === null) {
+      return 1;
+    }
+    return countLeaves(node.left) + countLeaves(node.right);
+  }
+}
 
 const root = new TreeNode('Andrea',
     new TreeNode('Alessandro', 
@@ -32,4 +48,4 @@ const root = new TreeNode('Andrea',
     ),
   );
 
-postOrderPrint(root);
+  console.log(countLeaves(root));
